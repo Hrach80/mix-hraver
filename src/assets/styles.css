@@ -4,7 +4,7 @@
 :root {
     /* Մուգ ֆոնի հիմնական գույները */
     --bg-dark: #120e0d;
-    --bg-primary: #1e1a18;
+    --bg-primary: #d0cfce;
     --bg-secondary: #2c2826;
 
     /* Ոսկեգույնի ՆՈՐ երանգները (Ավելի շողշողուն) */
@@ -84,7 +84,7 @@ a {
 }
 
 a:hover {
-    color: var(--gold-secondary);
+    color: rgb(240, 239, 239);
 }
 
 h1,
@@ -227,7 +227,7 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: var(--bg-primary);
+    background: var(--bg-dark);
     box-shadow:
         3px 3px 6px var(--shadow-dark),
         -3px -3px 6px var(--shadow-light);
