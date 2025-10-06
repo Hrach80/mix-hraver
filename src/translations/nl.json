@@ -1,0 +1,29 @@
+{
+    "header": {
+        "title": "Mix Country 1-jarig Bestaan"
+    },
+    "hero": {
+        "heading": "Uitnodiging voor een Groot Evenement",
+        "subheading": "Wij nodigen u graag uit voor de viering van het 1-jarig bestaan van onze winkel.",
+        "date": "15 Oktober",
+        "time": "Tijd: van 12:00 tot 18:00 uur",
+        "button": "Bekijk Details"
+    },
+    "details": {
+        "title": "Wat u kunt verwachten",
+        "p1": "Het is alweer een jaar geleden dat «Mix Country» u verrast met de beste boodschappen en de lekkerste fastfood. Laten we samen vieren!",
+        "p2": "U vindt bij ons kortingen, cadeaus, proeverijen en natuurlijk onze speciale burgers. Het evenement is perfect om met het gezin door te brengen.",
+        "p3": "Wij verwachten u, onze gewaardeerde gasten!"
+    },
+    "location": {
+        "title": "Locatie",
+        "address": "Stad Yerevan, Adres X, Straat Y",
+        "button": "Open op Kaart (Route)"
+    },
+    "contact": {
+        "title": "Contacten",
+        "call": "Bellen",
+        "phone": "+374 99 00 00 00",
+        "email": "info@mixcountry.am"
+    }
+}

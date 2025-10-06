@@ -1,0 +1,225 @@
+/* Գլոբալ ոճեր */
+/* src/assets/styles.css */
+
+
+:root {
+    --bg-dark: #120e0d;
+    /* Շատ մուգ, համարյա սև/շագանակագույն */
+
+    /* 2. ԵՐԿՐՈՐԴԱԿԱՆ ՄՈՒԳ ՖՈՆ (Քարտերի հիմքը) */
+    --bg-light: #1c1817;
+    /* Մի փոքր ավելի բաց՝ նեոմորֆիզմի հիմքի համար */
+
+    /* 3. ՈՍԿԵԳՈՒՅՆ (Հարուստ, ավելի դեղին/շագանակագույն ոսկեգույն) */
+    --gold: #c39d67;
+    /* Փոխարինված է՝ #726100-ի փոխարեն ավելի բաց և հարուստ ոսկի */
+
+    /* 4. ՍՏՎԵՐՆԵՐ (Նեոմորֆիկ էֆեկտի համար) */
+    --shadow-dark: #070505;
+    /* Շատ մուգ ստվեր */
+    --shadow-light: #28211f;
+    /* Բաց ստվեր (լույսի աղբյուրի համար) */
+
+    /* ---------------------------------------------------- */
+
+    --text-color: #f0f0f0;
+
+    /* Անիմացիոն փոփոխական */
+    --logo-scale: 1.05;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    /* ------------------------------------------------ */
+    /* ՖՈՆԻ ՆԿԱՐԻ ՈՃԵՐԸ - ՊԱՀՊԱՆՎԱԾ Է */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://pixy.org/src2/671/6718872.jpg");
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: var(--bg-dark);
+    /* ------------------------------------------------ */
+
+    color: var(--text-color);
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#root {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Նեոմորֆիկ Քարտի Ոճ */
+.neomorphic-card {
+    /* ՖՈՆԸ ՊԱՀՊԱՆՎԱԾ Է */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://cdn5.vectorstock.com/i/1000x1000/66/24/damask-vector-1046624.jpg");
+
+    background-size: cover;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    /* Նեոմորֆիկ էֆեկտը */
+    box-shadow:
+        9px 9px 18px var(--shadow-dark),
+        -9px -9px 18px var(--shadow-light);
+    transition: all 0.3s ease;
+    /* Ավելացված է անցում */
+}
+
+.neomorphic-card:hover {
+    transform: scale(1.01);
+    /* Ավելացված է փոքրիկ անիմացիա */
+    box-shadow:
+        5px 5px 10px var(--shadow-dark),
+        -5px -5px 10px var(--shadow-light);
+}
+
+/* Ոսկեգույն Տառեր և Շեշտադրումներ - ՖՈՆՏԵՐԸ ՊԱՀՊԱՆՎԱԾ ԵՆ */
+h1 {
+    color: var(--gold);
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: italic;
+}
+
+h2 {
+    color: var(--gold);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 5px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: italic;
+}
+
+p {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: italic;
+}
+
+/* Նեոմորֆիկ Կոճակ */
+.neomorphic-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    background: var(--bg-dark);
+    color: var(--gold);
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    /* Նեոմորֆիկ կոճակի էֆեկտը */
+    box-shadow:
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.neomorphic-btn:hover {
+    transform: translateY(-2px);
+    /* Ավելացված է փոքրիկ անիմացիա */
+}
+
+.neomorphic-btn:active {
+    box-shadow:
+        1px 1px 2px var(--shadow-dark) inset,
+        -1px -1px 2px var(--shadow-light) inset;
+    /* Սեղմելու էֆեկտ */
+}
+
+/* Լոգոյի Ոճ - ՖՈՆԸ ՈՒՂՂՎԱԾ Է, ԱՆԻՄԱՑԻԱՆ ԱՎԵԼԱՑՎԱԾ Է */
+.logo {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+
+    background: transparent;
+    /* ՈւՂՂՎԱԾ Է */
+    border: 3px solid var(--gold);
+    /* Ավելացված է շրջանակ */
+
+    /* Նեոմորֆիկ շրջանակ */
+    box-shadow:
+        -4px -4px 8px var(--shadow-light),
+        4px 4px 8px var(--shadow-dark);
+
+    object-fit: contain;
+    /* ՈւՂՂՎԱԾ Է */
+    transition: transform 0.4s ease-in-out;
+    /* Ավելացված է անցում */
+}
+
+.logo:hover {
+    transform: scale(var(--logo-scale)) rotate(5deg);
+    /* Ավելացված է անիմացիա */
+}
+
+
+/* Քարտեզի և Կոնտակտների Ոճեր */
+.map-container,
+.contact-link {
+    /* ՖՈՆԸ ՊԱՀՊԱՆՎԱԾ Է */
+    background: var(--bg-dark);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow:
+        4px 4px 8px var(--shadow-dark) inset,
+        -4px -4px 8px var(--shadow-light) inset;
+    transition: all 0.3s ease;
+    /* Ավելացված է անցում */
+}
+
+.map-container:hover,
+.contact-link:hover {
+    transform: scale(0.99);
+    /* Ավելացված է փոքրիկ անիմացիա */
+}
+
+.contact-link a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+    /* ՖՈՆՏԸ ՊԱՀՊԱՆՎԱԾ Է */
+    font-optical-sizing: auto;
+    font-style: italic;
+}
+
+/* Սոցիալական Ցանցերի Ոճ - ԱՎԵԼԱՑՎԱԾ Է */
+.social-icons a {
+    color: var(--gold);
+    font-size: 2.2em;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+    transform: translateY(-3px) scale(1.1);
+}
