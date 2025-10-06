@@ -191,7 +191,7 @@ const MainSections = () => {
     <>
       {/* Hero Section */}
       <div className="neomorphic-card" style={{ textAlign: 'center', padding: '30px 20px' }}>
-        <div className='img-div'><img src="/logo.png" alt="Mix Country Logo" className="logo" /></div>
+        <img src="/logo.png" alt="Mix Country Logo" className="logo" />
 
         <h1>{t('header.title')}</h1>
         <p style={{ color: 'var(--gold)', fontSize: '1.4em', marginBottom: '10px' }}>{t('hero.date')}</p>
