@@ -34,6 +34,7 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* ՈՒՂՂՈՒՄ 1: body-ի ոճերը */
 body {
     /* ՖՈՆԻ ՆԿԱՐԻ ՈՃԵՐԸ */
     background-image:
@@ -46,20 +47,22 @@ body {
     background-color: var(--bg-dark);
 
     color: var(--text-color);
-    /* ՈՒՂՂՈՒՄ: Լուծում է հորիզոնական scroll-ի խնդիրը */
-    padding: 20px 0;
-    overflow-x: hidden;
+    /* ՈՒՂՂՈՒՄ: Մաքրում ենք բոլոր padding-ները */
+    padding: 0;
+    /* ՈՒՂՂՈՒՄ: Հեռացնում ենք overflow-x: hidden-ը՝ տեսնելու համար իրական լուծումը */
+    /* overflow-x: hidden; */
 
     min-height: 100vh;
     display: flex;
     justify-content: center;
 }
 
+/* ՈՒՂՂՈՒՄ 2: #root-ի ոճերը */
 #root {
     width: 100%;
     max-width: 450px;
-    /* ՈՒՂՂՈՒՄ: Ավելացնում է բացվածք mobile-ի եզրերից */
-    padding: 0 20px;
+    /* ՈՒՂՂՈՒՄ: Ամբողջ բացվածքը (վերևից, ներքևից, կողքերից) տեղափոխում ենք #root */
+    padding: 20px 20px;
 }
 
 /* Նեոմորֆիկ Քարտի Ոճ */
