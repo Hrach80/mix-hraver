@@ -3,8 +3,8 @@ import { useTranslation, initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
 import './assets/styles.css';
 
-// Font Awesome-ի ԿՈՆՖԻԳՈՒՐԱՑԻԱՅԻ ներմուծում
-import { library } from '@fortawesome/fontawesome-svg-core'; // <-- ԿԱՐԵՎՈՐ ՇՏԿՈՒՄ
+// Font Awesome-ի ԿՈՆՖԻԳՈՒՐԱՑԻԱՅԻ ներմուծում (ԼՈՒԾՈՒՄԸ)
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faViber, faWhatsapp, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -53,7 +53,7 @@ const LanguageSelector = () => {
   };
 
   const activeStyle = {
-    // Ոսկեգույն ֆոն
+    // Ոսկեգույն ֆոնը՝ ըստ Ձեր ցանկության
     backgroundColor: '#c39d67',
     // Մուգ տեքստ
     color: '#120e0d',

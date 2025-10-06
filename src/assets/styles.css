@@ -12,6 +12,7 @@
 
     /* 3. ՈՍԿԵԳՈՒՅՆ (Հարուստ, ավելի դեղին/շագանակագույն ոսկեգույն) */
     --gold: #c39d67;
+    /* Փոխարինված է՝ #726100-ի փոխարեն ավելի բաց և հարուստ ոսկի */
 
     /* 4. ՍՏՎԵՐՆԵՐ (Նեոմորֆիկ էֆեկտի համար) */
     --shadow-dark: #070505;
@@ -34,9 +35,9 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* ՈՒՂՂՈՒՄ 1: body-ի ոճերը */
 body {
-    /* ՖՈՆԻ ՆԿԱՐԻ ՈՃԵՐԸ */
+    /* ------------------------------------------------ */
+    /* ՖՈՆԻ ՆԿԱՐԻ ՈՃԵՐԸ - ՊԱՀՊԱՆՎԱԾ Է */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("https://pixy.org/src2/671/6718872.jpg");
@@ -45,24 +46,18 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: var(--bg-dark);
+    /* ------------------------------------------------ */
 
     color: var(--text-color);
-    /* ՈՒՂՂՈՒՄ: Մաքրում ենք բոլոր padding-ները */
-    padding: 0;
-    /* ՈՒՂՂՈՒՄ: Հեռացնում ենք overflow-x: hidden-ը՝ տեսնելու համար իրական լուծումը */
-    /* overflow-x: hidden; */
-
+    padding: 20px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
 }
 
-/* ՈՒՂՂՈՒՄ 2: #root-ի ոճերը */
 #root {
     width: 100%;
     max-width: 450px;
-    /* ՈՒՂՂՈՒՄ: Ամբողջ բացվածքը (վերևից, ներքևից, կողքերից) տեղափոխում ենք #root */
-    padding: 20px 20px;
 }
 
 /* Նեոմորֆիկ Քարտի Ոճ */
@@ -81,16 +76,18 @@ body {
         9px 9px 18px var(--shadow-dark),
         -9px -9px 18px var(--shadow-light);
     transition: all 0.3s ease;
+    /* Ավելացված է անցում */
 }
 
 .neomorphic-card:hover {
     transform: scale(1.01);
+    /* Ավելացված է փոքրիկ անիմացիա */
     box-shadow:
         5px 5px 10px var(--shadow-dark),
         -5px -5px 10px var(--shadow-light);
 }
 
-/* Ոսկեգույն Տառեր և Շեշտադրումներ */
+/* Ոսկեգույն Տառեր և Շեշտադրումներ - ՖՈՆՏԵՐԸ ՊԱՀՊԱՆՎԱԾ ԵՆ */
 h1 {
     color: var(--gold);
     font-size: 2.2em;
@@ -141,15 +138,17 @@ p {
 
 .neomorphic-btn:hover {
     transform: translateY(-2px);
+    /* Ավելացված է փոքրիկ անիմացիա */
 }
 
 .neomorphic-btn:active {
     box-shadow:
         1px 1px 2px var(--shadow-dark) inset,
         -1px -1px 2px var(--shadow-light) inset;
+    /* Սեղմելու էֆեկտ */
 }
 
-/* Լոգոյի Ոճ - ՀԻՄՆԱԿԱՆ ՉԱՓՍ */
+/* Լոգոյի Ոճ - ՖՈՆԸ ՈՒՂՂՎԱԾ Է, ԱՆԻՄԱՑԻԱՆ ԱՎԵԼԱՑՎԱԾ Է */
 .logo {
     display: block;
     width: 120px;
@@ -158,18 +157,26 @@ p {
     border-radius: 50%;
 
     background: transparent;
+    /* ՈւՂՂՎԱԾ Է */
     border: 3px solid var(--gold);
+    /* Ավելացված է շրջանակ */
+
+    /* Նեոմորֆիկ շրջանակ */
     box-shadow:
         -4px -4px 8px var(--shadow-light),
         4px 4px 8px var(--shadow-dark);
 
     object-fit: contain;
+    /* ՈւՂՂՎԱԾ Է */
     transition: transform 0.4s ease-in-out;
+    /* Ավելացված է անցում */
 }
 
 .logo:hover {
     transform: scale(var(--logo-scale)) rotate(5deg);
+    /* Ավելացված է անիմացիա */
 }
+
 
 /* Քարտեզի և Կոնտակտների Ոճեր */
 .map-container,
@@ -183,29 +190,31 @@ p {
         4px 4px 8px var(--shadow-dark) inset,
         -4px -4px 8px var(--shadow-light) inset;
     transition: all 0.3s ease;
+    /* Ավելացված է անցում */
 }
 
 .map-container:hover,
 .contact-link:hover {
     transform: scale(0.99);
+    /* Ավելացված է փոքրիկ անիմացիա */
 }
 
 .contact-link a {
     color: var(--gold);
     text-decoration: none;
     font-weight: bold;
-    /* Ավելացված է նախկին կոդերից */
     display: flex;
     align-items: center;
     font-family: "Dancing Script", cursive;
+    /* ՖՈՆՏԸ ՊԱՀՊԱՆՎԱԾ Է */
     font-optical-sizing: auto;
     font-style: italic;
 }
 
-/* Սոցիալական Ցանցերի Ոճ */
+/* Սոցիալական Ցանցերի Ոճ - ԱՎԵԼԱՑՎԱԾ Է */
 .social-icons a {
     color: var(--gold);
-    font-size: 1.8em;
+    font-size: 2.2em;
     margin: 0 15px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -213,27 +222,4 @@ p {
 .social-icons a:hover {
     color: #ffd700;
     transform: translateY(-3px) scale(1.1);
-}
-
-/* ========================================================= */
-/* MEDIA QUERY (MOBILE ՃՇԳՐՏՈՒՄՆԵՐ՝ ԿԱՆԽԵԼՈՎ ԱՋ ՇԱՐԺՈՒՄԸ) */
-/* ========================================================= */
-
-@media (max-width: 360px) {
-
-    /* Քարտի ներքին բացվածքը փոքրացնում ենք նեղ էկրանների համար */
-    .neomorphic-card {
-        padding: 15px;
-    }
-
-    /* Լոգոյի չափը նվազեցնում ենք */
-    .logo {
-        width: 100px;
-        height: 100px;
-    }
-
-    /* Կոճակների ոճերը կարող ենք մի փոքր փոքրացնել (սակայն պահպանում ենք տեսքը) */
-    .neomorphic-btn {
-        padding: 12px;
-    }
 }
