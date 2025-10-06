@@ -4,7 +4,7 @@
 :root {
     /* Մուգ ֆոնի հիմնական գույները */
     --bg-dark: #120e0d;
-    --bg-primary: #c4c2c1;
+    --bg-primary: #1e1a18;
     --bg-secondary: #2c2826;
 
     /* Ոսկեգույնի ՆՈՐ երանգները (Ավելի շողշողուն) */
@@ -43,8 +43,11 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
 
+    /* ԹԱՐՄԱՑՈՒՄ: ՀԻՄՆԱԿԱՆ ՖՈՆՏԸ - Roboto-ն լավ ընթեռնելի է։ */
+    /* Noto Serif Armenian-ը ավելացված է որպես հայերենի պահեստային ֆոնտ։ */
+    font-family: 'Roboto', 'Noto Serif Armenian', sans-serif;
+    font-style: italic;
     /* ՖՈՆԱՅԻՆ ՊԱՏԿԵՐԻ ԿԱՐԳԱՎՈՐՈՒՄ */
     background-color: var(--bg-dark);
     background-image: url("https://pixy.org/src2/671/6718872.jpg");
@@ -59,7 +62,6 @@ body {
     box-sizing: border-box;
     padding-bottom: 50px;
 
-    /* Տեքստի ստվեր */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
@@ -71,10 +73,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    /* ԹԱՐՄԱՑՈՒՄ. Թափանցիկությունը փոքրացված է 0.55-ից մինչև 0.35 */
     background: rgba(0, 0, 0, 0.35);
-    /* Բլյուրը հեռացված է, որպեսզի նկարը պարզ երևա */
-    /* backdrop-filter: blur(1px); */
     z-index: -1;
 }
 
@@ -91,19 +90,20 @@ a:hover {
 h1,
 h2 {
     color: var(--gold-secondary);
+    /* ԹԱՐՄԱՑՈՒՄ: ԳԼԽԱԳՐԻ ՖՈՆՏԸ - Ձեռագիր, տոնական Dancing Script */
+    font-family: 'Dancing Script', 'Noto Serif Armenian', cursive;
     font-weight: 700;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    /* Ավելի ուժեղ ստվեր գլխագրերին */
 }
 
 /* Լոգոյի ոճը */
 .logo {
-    max-width: 150px;
+    max-width: 180px;
     height: auto;
     margin-bottom: 20px;
-    box-shadow:
-        8px 8px 15px var(--shadow-dark),
-        -8px -8px 15px var(--shadow-light);
-    border-radius: 50%;
+    
 }
 
 /* ========================================= */
@@ -142,7 +142,6 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Մուգ կիսաթափանցիկ շերտ */
     background: rgba(30, 26, 24, 0.4);
     z-index: 1;
 }
@@ -228,7 +227,7 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: var(--text-dark);
+    background: var(--bg-primary);
     box-shadow:
         3px 3px 6px var(--shadow-dark),
         -3px -3px 6px var(--shadow-light);
