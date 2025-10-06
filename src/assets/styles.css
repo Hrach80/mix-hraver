@@ -148,46 +148,46 @@ p {
     /* Սեղմելու էֆեկտ */
 }
 
-.img-div{
+/* ԼՈԳՈՅԻ ՇՐՋԱՆԱԿԻ ՈՃԸ */
+.img-div {
+    /* Կրկին մեծացնում ենք չափը՝ տառերի տեղավորման համար */
     border-radius: 50%;
     width: 180px;
-        height: 180px;
-        background: transparent;
-        border: 3px solid var(--gold);
+    height: 180px;
+    
+    background: transparent;
+    border: 3px solid var(--gold);
     display: flex;
     justify-content: center;
     align-items: center;
-        /* Նեոմորֆիկ շրջանակի ստվեր */
-        box-shadow:
-            -4px -4px 8px var(--shadow-light),
-            4px 4px 8px var(--shadow-dark);
-            margin: 0 auto 20px;
+    box-shadow:
+        -4px -4px 8px var(--shadow-light),
+        4px 4px 8px var(--shadow-dark);
+    margin: 0 auto 20px;
+    transition: transform 0.4s ease-in-out;
 }
+
+.img-div:hover {
+    transform: scale(var(--logo-scale)) rotate(2deg);
+}
+
+/* ԼՈԳՈՅԻ ՆԿԱՐԻ ՈՃԸ */
 .logo {
     display: block;
+    width: 80%;
+    height: 80%;
 
-    /* Չափերը էլ ավելի ենք մեծացնում, որպեսզի լոգոյի լայն մասը տեղավորվի */
-    width: 140px;
-    height: 140px;
-
-    /* Հանում ենք ներքին բացվածքը (padding)՝ մաքսիմալ տարածք ապահովելու համար */
-
-
-    margin: 0 auto 20px;
-    /* Կլոր ձև */
-    
+    /* ՆՎԱԶԱԳՈՒՅՆ padding, որպեսզի նկարը մաքսիմալ մեծ լինի */
+    padding: 1px;
 
     /* Այս արժեքը երաշխավորում է, որ ԱՄԲՈՂՋ ՆԿԱՐԸ տեսանելի լինի */
     object-fit: contain;
     object-position: center;
 
-    transition: transform 0.4s ease-in-out;
+    margin: 0;
+    
+    transform: none;
 }
-
-.logo:hover {
-    transform: scale(var(--logo-scale)) rotate(2deg);
-}
-
 
 /* Քարտեզի և Կոնտակտների Ոճեր */
 .map-container,
@@ -213,7 +213,7 @@ p {
 .contact-link a {
     color: var(--gold);
     text-decoration: none;
-    
+
     display: flex;
     align-items: center;
     font-family: "Dancing Script", cursive;
@@ -225,12 +225,12 @@ p {
 .social-icons a {
     color: var(--gold);
     font-size: 1.8em;
-    margin: 0 12px;
+    margin: 0 15px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
     color: #ffd700;
     transform: translateY(-3px) scale(1.1);
-    
+
 }
