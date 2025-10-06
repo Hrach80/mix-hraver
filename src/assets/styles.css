@@ -1,244 +1,240 @@
-/* Գլոբալ ոճեր և Փոփոխականներ */
-
+/* ========================================= */
+/* 1. ՀԻՄՆԱԿԱՆ ԳՈՒՅՆԵՐ ԵՎ ՓՈՓՈԽԱԿԱՆՆԵՐ (DARK MODE) */
+/* ========================================= */
 :root {
-    /* ԳՈՒՅՆԵՐ */
+    /* Մուգ ֆոնի հիմնական գույները */
     --bg-dark: #120e0d;
-    --bg-light: #1c1817;
-    --gold: #c39d67;
-    /* Հիմնական ոսկեգույն շեշտադրում */
-    --text-color: #f0f0f0;
+    /* Գրեթե սև, շատ մուգ շագանակագույն */
+    --bg-primary: #1e1a18;
+    /* Կոմպոնենտների ֆոն */
+    --bg-secondary: #2c2826;
+    /* Ավելի բաց ստվեր */
 
-    /* ՆԵՈՄՈՐՖԻԶՄԻ ՓՈՓՈԽԱԿԱՆՆԵՐ */
-    --shadow-dark: #070505;
-    --shadow-light: #28211f;
-    --card-radius: 20px;
+    /* Ոսկեգույնի երանգները */
+    --gold-primary: #c39d67;
+    /* Հիմնական ոսկեգույն */
+    --gold-secondary: #e6c58e;
+    /* Ավելի բաց ոսկեգույն */
 
-    /* ՉԱՓՍԵՐ */
-    --max-content-width: 450px;
-    /* Մեծ էկրանների առավելագույն լայնություն */
-    --mobile-padding: 20px;
-    /* Հիմնական բացվածքը կողքերից */
+    /* Տեքստի գույները */
+    --text-dark: #120e0d;
+    /* Մուգ տեքստ (օգտագործվում է ոսկեգույն ֆոնի վրա) */
+    --text-light: #f5f5f5;
+    /* Բաց տեքստ (սպիտակին մոտ) */
+    --text-accent: var(--gold-primary);
+    /* Առանձնացված տեքստ */
+
+    /* Նեոմորֆիկ ստվերներ */
+    --shadow-light: rgba(255, 255, 255, 0.05);
+    /* Բաց ստվեր */
+    --shadow-dark: rgba(0, 0, 0, 0.4);
+    /* Մուգ ստվեր */
+
+    /* Անցում (Transition) */
+    --transition-speed: 0.3s;
 }
 
-/* Ընդհանուր Զրոյացում */
-* {
-    box-sizing: border-box;
+/* Ընդհանուր ոճեր */
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'Arial', sans-serif;
-}
-
-/* ========================================================= */
-/* ԳԼԽԱՎՈՐ ԴԱՍԱՎՈՐՈՒԹՅՈՒՆ (LAYOUT) */
-/* ========================================================= */
-
-body {
-    /* ՖՈՆԻ ՆԿԱՐԻ ՈՃԵՐԸ (Անփոփոխ) */
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("https://pixy.org/src2/671/6718872.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    /* Փոխարինեք Ձեր նախընտրած տառատեսակով */
     background-color: var(--bg-dark);
-
-    color: var(--text-color);
+    color: var(--text-light);
+    /* Հիմնական տեքստի գույնը բաց է */
+    line-height: 1.6;
     min-height: 100vh;
-
-    /* ԼՈՒԾՈՒՄ: Մաքրում ենք body padding-ը և կենտրոնացնում */
-    padding: 0;
-
-    /* Կանխում է հորիզոնական scroll-ը */
-    overflow-x: hidden;
-
-    display: flex;
-    justify-content: center;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    /* Որպեսզի ոտնամասը չկպչի էկրանի ներքևի հատվածին */
 }
 
-#root {
-    width: 100%;
-    max-width: var(--max-content-width);
-
-    /* ԼՈՒԾՈՒՄ: Բոլոր բացվածքները տեղափոխում ենք #root-ի ներս */
-    padding: var(--mobile-padding);
+a {
+    color: var(--gold-primary);
+    /* Հղումների գույնը ոսկեգույն */
+    text-decoration: none;
+    transition: color var(--transition-speed);
 }
 
-/* ========================================================= */
-/* ՏԻՊՈԳՐԱՖԻԱ (ԱՆՓՈՓՈԽ) */
-/* ========================================================= */
-
-h1 {
-    color: var(--gold);
-    font-size: 2.2em;
-    text-align: center;
-    margin-bottom: 10px;
-    text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-style: italic;
+a:hover {
+    color: var(--gold-secondary);
 }
 
+h1,
 h2 {
-    color: var(--gold);
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 5px;
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-style: italic;
+    color: var(--gold-secondary);
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-p,
-.contact-link a {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-style: italic;
-}
-
-/* ========================================================= */
-/* ՆԵՈՄՈՐՖԻԿ ՔԱՐՏԵՐ ԵՎ ԿՈՃԱԿՆԵՐ */
-/* ========================================================= */
-
-.neomorphic-card {
-    /* ՔԱՐՏԻ ՖՈՆԸ (Անփոփոխ) */
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("https://cdn5.vectorstock.com/i/1000x1000/66/24/damask-vector-1046624.jpg");
-    background-size: cover;
-
-    border-radius: var(--card-radius);
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow:
-        9px 9px 18px var(--shadow-dark),
-        -9px -9px 18px var(--shadow-light);
-    transition: all 0.3s ease;
-}
-
-.neomorphic-card:hover {
-    transform: scale(1.005);
+/* Լոգոյի ոճը */
+.logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    /* Նեոմորֆիկ էֆեկտը լոգոյի համար */
     box-shadow:
         5px 5px 10px var(--shadow-dark),
         -5px -5px 10px var(--shadow-light);
+    border-radius: 50%;
+    /* Ենթադրելով, որ լոգոն կլոր է */
 }
 
-.neomorphic-btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 15px;
-    background: var(--bg-dark);
-    color: var(--gold);
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
+/* ========================================= */
+/* 2. ՆԵՈՄՈՐՖԻԿ ԿԱՐՏԵՐ և ԿՈՃԱԿՆԵՐ */
+/* ========================================= */
+
+/* Հիմնական Կարդի ոճը */
+.neomorphic-card {
+    width: 90%;
+    max-width: 450px;
+    /* Հիմնականում հեռախոսների համար */
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 20px;
+    background: var(--bg-primary);
     box-shadow:
-        6px 6px 12px var(--shadow-dark),
-        -6px -6px 12px var(--shadow-light);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    /* Ավելացված է հղումները կոճակի տեսքով ցուցադրելու համար */
-    text-align: center;
+        10px 10px 20px var(--shadow-dark),
+        -10px -10px 20px var(--shadow-light);
+    text-align: left;
+}
+
+/* Նեոմորֆիկ Կոճակի ոճը */
+.neomorphic-btn {
+    /* Կոճակի ֆոնը՝ ոսկեգույնի երանգով */
+    background: var(--gold-primary);
+    color: var(--text-dark);
+    /* Կոճակի տեքստի գույնը՝ մուգ */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-flex;
+    /* Իկոնկան և տեքստը կողք կողքի */
+    align-items: center;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: all var(--transition-speed);
+
+    /* Արտաքին ստվեր (Unpressed) */
+    box-shadow:
+        3px 3px 6px rgba(0, 0, 0, 0.4),
+        -3px -3px 6px rgba(255, 255, 255, 0.2);
 }
 
 .neomorphic-btn:hover {
-    transform: translateY(-2px);
+    /* Փոքր-ինչ բարձրացում hover-ի ժամանակ */
+    transform: translateY(-1px);
 }
 
-.neomorphic-btn:active {
+.neomorphic-btn:active,
+.neomorphic-btn.active {
+    /* Սեղմված տեսք (Pressed/Active) */
+    box-shadow:
+        1px 1px 2px var(--shadow-dark) inset,
+        -1px -1px 2px var(--shadow-light) inset;
+    transform: translateY(1px);
+    /* Փոքր-ինչ իջեցում */
+}
+
+/* ========================================= */
+/* 3. ԼԵԶՎԻ ԸՆՏՐԻՉԻ ԵՎ ԿՈՆՏԱԿՏՆԵՐԻ ՈՃԵՐ */
+/* ========================================= */
+
+/* Լեզվի կոճակների համար */
+header {
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+/* Կոնտակտային հղումներ */
+.contact-link a {
+    display: block;
+    padding: 10px 0;
+    margin: 5px 0;
+    color: var(--text-light);
+    /* Հղումի տեքստը բաց */
+    transition: color var(--transition-speed);
+}
+
+.contact-link a:hover {
+    color: var(--gold-primary);
+}
+
+/* Սոցիալական Իկոնկաներ */
+.social-icons a {
+    font-size: 2.2em;
+    margin: 0 12px;
+    color: var(--gold-primary);
+    transition: transform var(--transition-speed);
+    /* Կլոր նեոմորֆիկ հիմք իկոնկայի շուրջ */
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    box-shadow:
+        3px 3px 6px var(--shadow-dark),
+        -3px -3px 6px var(--shadow-light);
+}
+
+.social-icons a:hover {
+    /* Սեղմված տեսք hover-ի ժամանակ */
+    color: var(--gold-secondary);
+    transform: scale(0.95);
     box-shadow:
         1px 1px 2px var(--shadow-dark) inset,
         -1px -1px 2px var(--shadow-light) inset;
 }
 
-/* ========================================================= */
-/* ԼՈԳՈՅԻ ՈՃԵՐԸ (RESPONSIVE) */
-/* ========================================================= */
 
-.logo {
+/* ========================================= */
+/* 4. Google Քարտեզի Տարա */
+/* ========================================= */
+.map-container {
+    /* Քարտեզի համար ևս նեոմորֆիկ ներքին ստվեր */
+    border-radius: 10px;
+    background: var(--bg-primary);
+    /* Ինտերիեր ստվեր */
+    box-shadow:
+        2px 2px 4px var(--shadow-dark) inset,
+        -2px -2px 4px var(--shadow-light) inset;
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    /* Քարտեզը պահել ներսում */
     display: block;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-
-    background: transparent;
-    border: 3px solid var(--gold);
-    box-shadow:
-        -4px -4px 8px var(--shadow-light),
-        4px 4px 8px var(--shadow-dark);
-
-    object-fit: contain;
-    transition: transform 0.4s ease-in-out;
 }
 
-.logo:hover {
-    transform: scale(var(--logo-scale, 1.05)) rotate(5deg);
-}
-
-/* ========================================================= */
-/* ՔԱՐՏԵԶ ԵՎ ԿՈՆՏԱԿՏՆԵՐԻ ՈՃԵՐ */
-/* ========================================================= */
-
-.map-container,
-.contact-link {
-    background: var(--bg-dark);
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 10px;
-    box-shadow:
-        4px 4px 8px var(--shadow-dark) inset,
-        -4px -4px 8px var(--shadow-light) inset;
-    transition: all 0.3s ease;
-}
-
-.map-container:hover,
-.contact-link:hover {
-    transform: scale(0.99);
-}
-
-.contact-link a {
-    color: var(--gold);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-}
-
-.contact-link a svg {
-    margin-right: 10px;
-}
-
-/* Սոցիալական Ցանցեր */
-.social-icons a {
-    color: var(--gold);
-    font-size: 1.8em;
-    margin: 0 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #ffd700;
-    transform: translateY(-3px) scale(1.1);
-}
-
-/* ========================================================= */
-/* MEDIA QUERY (ԼՐԱՑՈՒՑԻՉ ՃՇԳՐՏՈՒՄՆԵՐ ՇԱՏ ՆԵՂ ԷԿՐԱՆՆԵՐԻ ՀԱՄԱՐ) */
-/* ========================================================= */
-
-@media (max-width: 360px) {
-
-    /* Փոքրացնում ենք հիմնական padding-ը շատ նեղ էկրաններին հարմարվելու համար */
-    #root {
-        padding: 15px 10px;
+/* Բջջայինի Ադապտացիա */
+@media (max-width: 500px) {
+    .neomorphic-card {
+        padding: 20px 15px;
+        margin: 15px auto;
+        border-radius: 15px;
     }
 
-    /* Լոգոյի չափը նվազեցնում ենք */
     .logo {
-        width: 100px;
-        height: 100px;
+        max-width: 120px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .social-icons a {
+        font-size: 2em;
+        margin: 0 8px;
+        width: 45px;
+        height: 45px;
     }
 }
