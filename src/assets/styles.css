@@ -4,23 +4,15 @@
 :root {
     /* Մուգ ֆոնի հիմնական գույները */
     --bg-dark: #120e0d;
-    --bg-primary: #d0cfce;
+    --bg-primary: #5e5d5d;
     --bg-secondary: #2c2826;
-
-    /* Ոսկեգույնի ՆՈՐ երանգները (Ավելի շողշողուն) */
-    --gold-primary: #e0b875;
-    --gold-secondary: #ffda9e;
-
-    /* Տեքստի գույները */
+    --gold-primary: #aa864e;
+    --gold-secondary:#aa864e;
     --text-dark: #120e0d;
     --text-light: #f5f5f5;
     --text-accent: var(--gold-primary);
-
-    /* Նեոմորֆիկ ստվերներ */
     --shadow-light: rgba(255, 255, 255, 0.05);
     --shadow-dark: rgba(0, 0, 0, 0.6);
-
-    /* Անցում (Transition) */
     --transition-speed: 0.3s;
 }
 
@@ -43,25 +35,19 @@
 body {
     margin: 0;
     padding: 0;
-
-    /* ԹԱՐՄԱՑՈՒՄ: ՀԻՄՆԱԿԱՆ ՖՈՆՏԸ - Roboto-ն լավ ընթեռնելի է։ */
-    /* Noto Serif Armenian-ը ավելացված է որպես հայերենի պահեստային ֆոնտ։ */
     font-family: 'Roboto', 'Noto Serif Armenian', sans-serif;
     font-style: italic;
-    /* ՖՈՆԱՅԻՆ ՊԱՏԿԵՐԻ ԿԱՐԳԱՎՈՐՈՒՄ */
     background-color: var(--bg-dark);
     background-image: url("https://pixy.org/src2/671/6718872.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-
     position: relative;
     color: var(--text-light);
     line-height: 1.6;
     min-height: 100vh;
     box-sizing: border-box;
     padding-bottom: 50px;
-
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
@@ -90,17 +76,15 @@ a:hover {
 h1,
 h2 {
     color: var(--gold-secondary);
-    /* ԹԱՐՄԱՑՈՒՄ: ԳԼԽԱԳՐԻ ՖՈՆՏԸ - Ձեռագիր, տոնական Dancing Script */
     font-family: 'Dancing Script', 'Noto Serif Armenian', cursive;
     font-weight: 700;
     letter-spacing: 1px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    /* Ավելի ուժեղ ստվեր գլխագրերին */
 }
 
 /* Լոգոյի ոճը */
 .logo {
-    max-width: 180px;
+    max-width: 200px;
     height: auto;
     margin-bottom: 20px;
     
@@ -117,10 +101,8 @@ h2 {
     margin: 20px auto;
     padding: 25px;
     border-radius: 20px;
-
-    /* ԿԱՐԴԻ ՆԵՐՔԻՆ ՖՈՆԸ՝ ԶԱՐԴԱՆԱԽՇՈՎ */
     background-color: var(--bg-primary);
-    background-image: url("https://cdn5.vectorstock.com/i/1000x1000/66/24/damask-vector-1046624.jpg");
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f0d52cc9-2ac9-4f64-88ba-72201a824e85/d5vcpty-24be680d-743e-40b5-92ef-4045d7829042.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi9mMGQ1MmNjOS0yYWM5LTRmNjQtODhiYS03MjIwMWE4MjRlODUvZDV2Y3B0eS0yNGJlNjgwZC03NDNlLTQwYjUtOTJlZi00MDQ1ZDc4MjkwNDIuanBnIn1dXX0.TA73oB_-VDCVdm1IAMOL4Wk7880_yOCVLWBxa1LCmgo");
     background-size: cover;
     background-blend-mode: multiply;
 
