@@ -1,6 +1,6 @@
 {
     "header": {
-        "title": "Mix Country Տարեդարձն է!"
+        "title": "Տարեդարձն է!"
     },
     "hero": {
         "heading": "Մեծ Միջոցառման Հրավեր",
@@ -26,7 +26,7 @@
     },
     "location": {
         "title": "Գտնվելու վայրը",
-        "address": "Mix Contry Bisschoppenhoflaan 219 Andwerpen",
+        "address": "Mix Country Bisschoppenhoflaan 219 Antwerpen",
         "button": "Բացել երթուղին"
     },
     "contact": {
@@ -34,5 +34,12 @@
         "call": "Հեռ․",
         "phone": "+0032486725765",
         "email": "info@mixcountry.be"
+    },
+    "countdown": {
+        "days": "Օր",
+        "hours": "Ժամ",
+        "minutes": "Րոպե",
+        "seconds": "Վրկ.",
+        "event_started": "Միջոցառումն արդեն մեկնարկել է։ Շտապեք։"
     }
 }

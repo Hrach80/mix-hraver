@@ -25,7 +25,7 @@
     },
     "location": {
         "title": "Locatie",
-        "address": "Mix Contry Bisschoppenhoflaan 219 Antwerpen",
+        "address": "Mix Country Bisschoppenhoflaan 219 Antwerpen",
         "button": "Open de route"
     },
     "contact": {
@@ -33,5 +33,12 @@
         "call": "Tel.",
         "phone": "+0032486725765",
         "email": "info@mixcountry.be"
-    }
+    },
+        "countdown": {
+            "days": "Dagen",
+            "hours": "Uur",
+            "minutes": "Min",
+            "seconds": "Sec",
+            "event_started": "Het evenement is al begonnen. Haast je!"
+        }
 }

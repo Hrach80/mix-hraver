@@ -1,272 +1,895 @@
-/* ========================================= */
-/* 1. ՀԻՄՆԱԿԱՆ ԳՈՒՅՆԵՐ ԵՎ ՓՈՓՈԽԱԿԱՆՆԵՐ (DARK/GOLD THEME) */
-/* ========================================= */
+/* --- ԳԼՈԲԱԼ ՓՈՓՈԽԱԿԱՆՆԵՐ ԵՎ ՖՈՆ --- */
 :root {
-    /* Մուգ ֆոնի հիմնական գույները */
-    --bg-dark: #120e0d;
-    --bg-primary: #fff4c8;
-    --bg-secondary: #2c2826;
-    --gold-primary: #aa864e;
-    --gold-secondary:#aa864e;
-    --text-dark: #120e0d;
-    --text-light: #f5f5f5;
-    --text-accent: var(--gold-primary);
-    --shadow-light: rgba(255, 255, 255, 0.05);
-    --shadow-dark: rgba(0, 0, 0, 0.6);
-    --transition-speed: 0.3s;
+    /* Բաց ֆոնային գույներ */
+    --bg-color: #F0F2F5;
+    /* Շատ բաց մոխրագույն/սպիտակ */
+
+    /* Գույների փոփոխություն */
+    --gold: #023eca;
+    /* Նոր հիմնական գույն՝ Կապույտ (փոխարինում է ոսկեգույնին) */
+    --accent-red: #DC3545;
+    /* Կարմիր՝ շեշտադրման համար */
+    --text-color: #1A1A1A;
+    /* Հիմնական տեքստի գույն՝ Սև */
+
+    /* Նեոմորֆիզմի համար */
+    --shadow-light: #FFFFFF;
+    --shadow-dark: #CFCFCF;
+    --border-color: #E0E0E0;
+
+    /* Մոբայլ ֆոնի համար */
+    --max-width: 450px;
 }
 
-/* Ֆոնի շողալու անիմացիա (Կարդերի համար) */
-@keyframes goldGlow {
-    0% {
-        box-shadow: 0 0 5px rgba(224, 184, 117, 0.1);
-    }
-
-    50% {
-        box-shadow: 0 0 20px rgba(224, 184, 117, 0.35);
-    }
-
-    100% {
-        box-shadow: 0 0 5px rgba(224, 184, 117, 0.1);
-    }
-}
-
-/* Ընդհանուր ոճեր */
+/* Ընդհանուր ոճավորում */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'Noto Serif Armenian', sans-serif;
-    font-style: italic;
-    background-color: var(--bg-dark);
-    background-image: url("https://pixy.org/src2/671/6718872.jpg");
-    background-size: contain;
-    background-attachment: fixed;
-    position: relative;
-    color: var(--text-light);
-    line-height: 1.6;
+    /* ՓՈՓՈԽՎԱԾ ՖՈՆՏ: Impact-ը՝ լոգոյի տեսքին նմանեցնելու համար */
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* Սև տեքստ */
+    /* ԿԵՆՏՐՈՆԱՑՈՒՄ */
+    display: flex;
+    justify-content: center;
+    /* content-ը վերևից կենտրոնացնելու համար՝ եթե էկրանը մեծ է */
+    align-items: flex-start;
     min-height: 100vh;
-    box-sizing: border-box;
-    padding-bottom: 50px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Ֆոնային ՄՈՒԳ ԹԱՂԱՆԹ (Body Overlay) ԷՖԵԿՏԸ */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
+/* App կոնտեյներ՝ Mobile-first դիզայնի կենտրոնացումով */
+.app-container {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: -1;
+    max-width: var(--max-width);
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* ԿԵՆՏՐՈՆԱՑՈՒՄ */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-a {
-    color: var(--gold-primary);
-    text-decoration: none;
-    transition: color var(--transition-speed);
-}
-
-a:hover {
-    color: rgb(240, 239, 239);
-}
-
+/* ՎԵՐՆԱԳՐԵՐԻ ՖՈՆՏ ԵՎ ԴԱՍԱՎՈՐՎԱԾՈՒԹՅՈՒՆ */
 h1,
-h2 {
-    color: var(--gold-secondary);
-    font-family: 'Dancing Script', 'Noto Serif Armenian', cursive;
-    font-weight: 800;
-
+h2,
+.hero-title,
+.hero-date,
+.countdown-expired {
+    /* Տառատեսակը նմանեցված է լոգոյին */
+    font-family: 'Impact', sans-serif;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    /* Լրացուցիչ տարածք տառերի միջև */
+    text-align: center;
+    /* Վերնագրերը կենտրոնում */
 }
 
-/* Լոգոյի ոճը */
-.logo {
-    max-width: 200px;
-    height: auto;
+/* Գլխագրեր */
+h1 {
+    font-size: 2.2em;
+    color: var(--accent-red);
+    /* Կապույտ */
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: var(--accent-red);
+    /* Կապույտ */
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 5px;
     margin-bottom: 20px;
-    
 }
 
-/* ========================================= */
-/* 2. ՆԵՈՄՈՐՖԻԿ ԿԱՐՏԵՐ և ԿՈՃԱԿՆԵՐ */
-/* ========================================= */
+/* ՊԱՐԲԵՐՈՒԹՅՈՒՆՆԵՐԻ ԴԱՍԱՎՈՐՎԱԾՈՒԹՅՈՒՆ */
+/* Բոլոր պարբերությունները լռելյայն դասավորվում են ձախից՝ կարդացվելիությունը բարձրացնելու համար */
+.neomorphic-card p {
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-/* Հիմնական Կարդի ոճը */
+
+/* --- ՆԵՈՄՈՐՖԻԶՄԻ ԴԱՍԵՐ --- */
+
+/* Քարտի ոճ (Card) */
 .neomorphic-card {
-    width: 90%;
-    max-width: 450px;
-    margin: 20px auto;
+    /* Քարտը ինքնին դեռ կենտրոնացված է (flex-direction: column; align-items: center;), բայց ներքին p էլեմենտները դասավորվել են ձախից */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-color);
+    border-radius: 18px;
     padding: 25px;
-    border-radius: 20px;
-    background-color: var(--bg-primary);
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f0d52cc9-2ac9-4f64-88ba-72201a824e85/d5vcpty-24be680d-743e-40b5-92ef-4045d7829042.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi9mMGQ1MmNjOS0yYWM5LTRmNjQtODhiYS03MjIwMWE4MjRlODUvZDV2Y3B0eS0yNGJlNjgwZC03NDNlLTQwYjUtOTJlZi00MDQ1ZDc4MjkwNDIuanBnIn1dXX0.TA73oB_-VDCVdm1IAMOL4Wk7880_yOCVLWBxa1LCmgo");
-    background-size: cover;
-    background-blend-mode: multiply;
-
+    margin-bottom: 30px;
     box-shadow:
         10px 10px 20px var(--shadow-dark),
         -10px -10px 20px var(--shadow-light);
-    text-align: left;
-
-    animation: goldGlow 8s infinite alternate ease-in-out;
-    position: relative;
-    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* ԿԱՐԴԻ ՆԵՐՔԻՆ ԹԱՂԱՆԹ (Card Inner Overlay) */
-.neomorphic-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(30, 26, 24, 0.4);
-    z-index: 1;
+.neomorphic-card:hover {
+    transform: translateY(-3px);
 }
 
-/* ԿԱՐԴԻ ՏԱՐՐԵՐԸ ԲԵՐԵԼ ԱՌԱՋ */
-.neomorphic-card>* {
-    position: relative;
-    z-index: 2;
-}
-
-/* Նեոմորֆիկ Կոճակի ոճը */
+/* Կոճակի ոճ (Button) */
 .neomorphic-btn {
-    background: var(--gold-primary);
-    color: var(--text-dark);
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 20px;
     display: inline-flex;
+    justify-content: center;
     align-items: center;
-    font-weight: bold;
-    font-size: 1em;
-    text-transform: uppercase;
-    transition: all var(--transition-speed);
-
-    /* Արտաքին ստվեր + թեթև շող */
+    background: var(--bg-color);
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--gold);
     box-shadow:
-        3px 3px 6px var(--shadow-dark),
-        -3px -3px 6px var(--shadow-light),
-        0 0 5px var(--gold-primary);
-    animation: none;
+        4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light);
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: none;
+    user-select: none;
 }
 
-.neomorphic-btn:hover {
-    transform: translateY(-2px);
-    box-shadow:
-        5px 5px 10px var(--shadow-dark),
-        -5px -5px 10px var(--shadow-light),
-        0 0 10px var(--gold-secondary);
-}
-
-.neomorphic-btn:active,
-.neomorphic-btn.active {
-    background-color: var(--gold-primary);
-    color: var(--text-dark);
+/* Կոճակը սեղմելիս (Ինտերակտիվություն) */
+.neomorphic-btn:active {
     box-shadow:
         1px 1px 2px var(--shadow-dark) inset,
         -1px -1px 2px var(--shadow-light) inset;
-    transform: translateY(1px);
+    transform: scale(0.98);
+    color: var(--accent-red);
+    /* Կարմիր */
 }
 
-/* ========================================= */
-/* 3. ԼԵԶՎԻ ԸՆՏՐԻՉԻ ԵՎ ԿՈՆՏԱԿՏՆԵՐԻ ՈՃԵՐ */
-/* ========================================= */
-
-header {
-    border-bottom: 1px solid var(--bg-secondary);
+.neomorphic-btn:hover:not(:active) {
+    color: var(--gold);
 }
 
-.contact-link a {
-    display: block;
-    padding: 10px 0;
-    margin: 5px 0;
-    color: var(--text-light);
-    transition: color var(--transition-speed), transform var(--transition-speed);
+.btn-full-width {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
 }
 
-.contact-link a:hover {
-    color: var(--gold-primary);
-    transform: translateX(5px);
-}
-
-/* Սոցիալական Իկոնկաներ */
-.social-icons a {
-    font-size: 2.2em;
-    margin: 0 12px;
-    color: var(--gold-primary);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    display: inline-flex;
-    width: 50px;
-    height: 50px;
+/* --- ԼԵԶՎԻ ԸՆՏՐՈՒԹՅՈՒՆ --- */
+.lang-selector-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    display: flex;
     justify-content: center;
+    gap: 10px;
+}
+
+
+/* --- HERO SECTION --- */
+
+/* Hero բաժնի պարբերությունները մնում են կենտրոնում */
+.hero-section p {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    /* Կապույտ */
+}
+
+/* ԼՈԳՈՅԻ ՈՃԱՎՈՐՈՒՄ (ՄԱՔՐՎԱԾ) */
+.plain-logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 0;
+    box-shadow: none;
+    animation: none;
+}
+
+.hero-date {
+    color: var(--gold);
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-time {
+    font-size: 1.2em;
+    color: var(--text-color);
+    /* Սև */
+}
+
+/* --- COUNTDOWN TIMER --- */
+.countdown-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.countdown-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    border-radius: 50%;
-    background: var(--bg-dark);
-    box-shadow:
-        3px 3px 6px var(--shadow-dark),
-        -3px -3px 6px var(--shadow-light);
+    min-width: 60px;
+    margin: 5px 0;
 
-    border: 1px solid rgba(224, 184, 117, 0.2);
+    /* 3D պտույտի համար անհրաժեշտ ոճեր */
+    perspective: 500px;
 }
 
-.social-icons a:hover {
-    color: var(--gold-secondary);
-    transform: scale(1.1);
-    box-shadow:
-        1px 1px 2px var(--shadow-dark) inset,
-        -1px -1px 2px var(--shadow-light) inset,
-        0 0 15px var(--gold-secondary);
-}
+.time-value {
+    /* Ֆոնտը չի կիրառվում այստեղ, քանի որ պետք է լինեն թվեր */
+    font-size: 14px;
+    /* Չափսը փոխվեց 12px-ի */
+    padding: 8px 4px;
+    color: var(--gold);
+    /* Կապույտ */
+    min-width: 50px;
 
+    /* ՆԵՈՄՈՐՖԻԿ ԲԼՈԿԻ ՈՃԵՐԸ ՈՒԺԵՂԱՑՎԱԾ Է */
+    /* --- ԳԼՈԲԱԼ ՓՈՓՈԽԱԿԱՆՆԵՐ ԵՎ ՖՈՆ --- */
+    :root {
+        /* Բաց ֆոնային գույներ */
+        --bg-color: #F0F2F5;
+        /* Շատ բաց մոխրագույն/սպիտակ */
 
-/* ========================================= */
-/* 4. Google Քարտեզի Տարա */
-/* ========================================= */
-.map-container {
-    border-radius: 10px;
-    background: var(--bg-primary);
-    box-shadow:
-        2px 2px 4px var(--shadow-dark) inset,
-        -2px -2px 4px var(--shadow-light) inset;
-    margin-bottom: 20px;
-}
+        /* Գույների փոփոխություն */
+        --gold: #007BFF;
+        /* Նոր հիմնական գույն՝ Կապույտ (փոխարինում է ոսկեգույնին) */
+        --accent-red: #DC3545;
+        /* Կարմիր՝ շեշտադրման համար */
+        --text-color: #1A1A1A;
+        /* Հիմնական տեքստի գույն՝ Սև */
 
-.map-container iframe {
-    display: block;
-}
+        /* Նեոմորֆիզմի համար */
+        --shadow-light: #FFFFFF;
+        --shadow-dark: #CFCFCF;
+        --border-color: #E0E0E0;
 
-/* Բջջայինի Ադապտացիա */
-@media (max-width: 500px) {
-    .neomorphic-card {
-        padding: 20px 15px;
-        margin: 15px auto;
-        border-radius: 15px;
+        /* Մոբայլ ֆոնի համար */
+        --max-width: 450px;
     }
 
-    .logo {
-        max-width: 120px;
+    /* Ընդհանուր ոճավորում */
+    body {
+        margin: 0;
+        padding: 0;
+        /* ՓՈՓՈԽՎԱԾ ՖՈՆՏ: Impact-ը՝ լոգոյի տեսքին նմանեցնելու համար */
+        font-family: 'Arial', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        /* Սև տեքստ */
+        /* ԿԵՆՏՐՈՆԱՑՈՒՄ */
+        display: flex;
+        justify-content: center;
+        /* content-ը վերևից կենտրոնացնելու համար՝ եթե էկրանը մեծ է */
+        align-items: flex-start;
+        min-height: 100vh;
     }
 
+    /* App կոնտեյներ՝ Mobile-first դիզայնի կենտրոնացումով */
+    .app-container {
+        width: 100%;
+        max-width: var(--max-width);
+        padding: 0 15px;
+        box-sizing: border-box;
+        /* ԿԵՆՏՐՈՆԱՑՈՒՄ */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ՎԵՐՆԱԳՐԵՐԻ ՖՈՆՏ ԵՎ ԴԱՍԱՎՈՐՎԱԾՈՒԹՅՈՒՆ */
+    h1,
+    h2,
+    .hero-title,
+    .hero-date,
+    .countdown-expired {
+        /* Տառատեսակը նմանեցված է լոգոյին */
+        font-family: 'Impact', sans-serif;
+        letter-spacing: 1px;
+        /* Լրացուցիչ տարածք տառերի միջև */
+        text-align: center;
+        /* Վերնագրերը կենտրոնում */
+    }
+
+    /* Գլխագրեր */
     h1 {
-        font-size: 1.8em;
+        font-size: 2.2em;
+        color: var(--gold);
+        /* Կապույտ */
+        margin-bottom: 0.5em;
     }
 
     h2 {
-        font-size: 1.4em;
+        font-size: 1.5em;
+        color: var(--gold);
+        /* Կապույտ */
+        border-bottom: 2px solid var(--gold);
+        padding-bottom: 5px;
+        margin-bottom: 20px;
     }
 
-    .social-icons a {
-        font-size: 2em;
-        margin: 0 8px;
-        width: 45px;
-        height: 45px;
+    /* ՊԱՐԲԵՐՈՒԹՅՈՒՆՆԵՐԻ ԴԱՍԱՎՈՐՎԱԾՈՒԹՅՈՒՆ */
+    /* Բոլոր պարբերությունները լռելյայն դասավորվում են ձախից՝ կարդացվելիությունը բարձրացնելու համար */
+    .neomorphic-card p {
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
     }
+
+
+    /* --- ՆԵՈՄՈՐՖԻԶՄԻ ԴԱՍԵՐ --- */
+
+    /* Քարտի ոճ (Card) */
+    .neomorphic-card {
+        /* Քարտը ինքնին դեռ կենտրոնացված է (flex-direction: column; align-items: center;), բայց ներքին p էլեմենտները դասավորվել են ձախից */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--bg-color);
+        border-radius: 18px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow:
+            10px 10px 20px var(--shadow-dark),
+            -10px -10px 20px var(--shadow-light);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .neomorphic-card:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Կոճակի ոճ (Button) */
+    .neomorphic-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg-color);
+        border-radius: 12px;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--gold);
+        box-shadow:
+            4px 4px 8px var(--shadow-dark),
+            -4px -4px 8px var(--shadow-light);
+        transition: all 0.2s ease-in-out;
+        border: none;
+        outline: none;
+        user-select: none;
+    }
+
+    /* Կոճակը սեղմելիս (Ինտերակտիվություն) */
+    .neomorphic-btn:active {
+        box-shadow:
+            1px 1px 2px var(--shadow-dark) inset,
+            -1px -1px 2px var(--shadow-light) inset;
+        transform: scale(0.98);
+        color: var(--accent-red);
+        /* Կարմիր */
+    }
+
+    .neomorphic-btn:hover:not(:active) {
+        color: var(--gold);
+    }
+
+    .btn-full-width {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        box-sizing: border-box;
+    }
+
+    /* --- ԼԵԶՎԻ ԸՆՏՐՈՒԹՅՈՒՆ --- */
+    .lang-selector-header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+    /* --- HERO SECTION --- */
+
+    /* Hero բաժնի պարբերությունները մնում են կենտրոնում */
+    .hero-section p {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.4em;
+        text-transform: uppercase;
+        color: var(--gold);
+        /* Կապույտ */
+    }
+
+    /* ԼՈԳՈՅԻ ՈՃԱՎՈՐՈՒՄ (ՄԱՔՐՎԱԾ) */
+    .plain-logo {
+        max-width: 120px;
+        height: auto;
+        margin-bottom: 15px;
+        border-radius: 0;
+        box-shadow: none;
+        animation: none;
+    }
+
+    .hero-date {
+        color: var(--gold);
+        font-size: 1.6em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .hero-time {
+        font-size: 1.2em;
+        color: var(--text-color);
+        /* Սև */
+    }
+
+    /* --- COUNTDOWN TIMER --- */
+    .countdown-container {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .countdown-blocks {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .time-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 60px;
+        margin: 5px 0;
+
+        /* 3D պտույտի համար անհրաժեշտ ոճեր */
+        perspective: 500px;
+    }
+
+    .time-value {
+        /* Ֆոնտը չի կիրառվում այստեղ, քանի որ պետք է լինեն թվեր */
+        font-size: 12px;
+        /* Չափսը փոխվեց 12px-ի */
+        padding: 10px 10px;
+        color: var(--gold);
+        /* Կապույտ */
+        min-width: 50px;
+
+        /* ՆԵՈՄՈՐՖԻԿ ԲԼՈԿԻ ՈՃԵՐԸ ՈՒԺԵՂԱՑՎԱԾ Է */
+        background: var(--shadow-light);
+        /* Շատ բաց ֆոն */
+        border-radius: 8px;
+        box-shadow:
+            inset 2px 2px 4px var(--shadow-dark),
+            inset -2px -2px 4px var(--shadow-light);
+
+        /* Թվերը շարժելու անիմացիան */
+        animation: rollEffect 2s infinite alternate ease-in-out;
+    }
+
+    .time-label {
+        /* Լոգոյի տառատեսակը կիրառվում է նաև պիտակների վրա */
+        font-family: 'Impact', sans-serif;
+        letter-spacing: 0.5px;
+        margin-top: 5px;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--text-color);
+        /* Սև */
+    }
+
+    .countdown-expired {
+        color: var(--gold);
+        /* Կապույտ */
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    /* --- DETAILS SECTION --- */
+    .details-emphasis {
+        font-weight: bold;
+        color: var(--gold);
+        /* Կապույտ */
+        margin-top: 20px;
+        font-size: 1.1em;
+    }
+
+    /* --- LOCATION SECTION (Քարտեզ) --- */
+    .address-text {
+        margin-bottom: 15px;
+        font-style: italic;
+        color: var(--text-color);
+        /* Սև */
+    }
+
+    .map-container {
+        height: 250px;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow:
+            4px 4px 8px var(--shadow-dark) inset,
+            -4px -4px 8px var(--shadow-light) inset;
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* --- CONTACT SECTION --- */
+    .contact-card-mb {
+        margin-bottom: 20px;
+    }
+
+    .contact-link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 1.1em;
+        /* Կոնտակտային տողերը դասավորվում են ձախից */
+        align-self: flex-start;
+    }
+
+    .contact-link a {
+        text-decoration: none;
+        color: var(--text-color);
+        /* Սև */
+        display: flex;
+        align-items: center;
+        transition: color 0.2s;
+    }
+
+    /* Կոնտակտային տեքստի հղումների գույնը */
+    .contact-link a:hover {
+        color: var(--gold);
+        /* Կապույտ */
+    }
+
+    .contact-link svg {
+        margin-right: 15px;
+        font-size: 1.2em;
+        color: var(--gold);
+        /* Իկոնկաները Կապույտ */
+    }
+
+    /* Սոցիալական ցանցեր */
+    .social-icons {
+        margin-top: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon-btn {
+        font-size: 2em;
+        color: var(--text-color);
+        /* Սև */
+        transition: transform 0.2s ease-in-out, color 0.2s;
+    }
+
+    .social-icon-btn:hover {
+        color: var(--gold);
+        /* Սոցիալական ցանցերի իկոնկաները hover-ի ժամանակ Կապույտ */
+        transform: scale(1.1);
+    }
+
+    /* --- PARTNER FOOTER --- */
+    .footer-partners {
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .partners-container {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .partner-btn {
+        padding: 12px 25px;
+    }
+
+    .copyright-text {
+        margin-top: 20px;
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* --- ԱՆԻՄԱՑԻԱՆԵՐ --- */
+
+    /* Թվերի "շարժման" անիմացիա (3D rotation) */
+    @keyframes rollEffect {
+        0% {
+            transform: rotateX(0deg) translateY(0);
+            opacity: 1;
+        }
+
+        50% {
+            transform: rotateX(30deg) translateY(-3px);
+            opacity: 0.9;
+        }
+
+        100% {
+            transform: rotateX(0deg) translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animated-fade-in {
+        animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes scaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .animated-scale {
+        animation: scaleIn 0.3s ease-out;
+    }
+
+    @keyframes pop {
+        0% {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .partner-btn.animated-pop {
+        animation: pop 0.5s ease-out;
+    }
+
+    /* Շատ բաց ֆոն */
+    border-radius: 8px;
+    box-shadow: inset 2px 2px 4px var(--shadow-dark),
+    inset -2px -2px 4px var(--shadow-light);
+
+    /* Թվերը շարժելու անիմացիան */
+    animation: rollEffect 2s infinite alternate ease-in-out;
+}
+
+.time-label {
+    /* Լոգոյի տառատեսակը կիրառվում է նաև պիտակների վրա */
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--text-color);
+    /* Սև */
+}
+
+.countdown-expired {
+    color: var(--gold);
+    /* Կապույտ */
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* --- DETAILS SECTION --- */
+.details-emphasis {
+    font-weight: bold;
+    color: var(--gold);
+    /* Կապույտ */
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+/* --- LOCATION SECTION (Քարտեզ) --- */
+.address-text {
+    margin-bottom: 15px;
+    font-style: italic;
+    color: var(--text-color);
+    /* Սև */
+}
+
+.map-container {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow:
+        4px 4px 8px var(--shadow-dark) inset,
+        -4px -4px 8px var(--shadow-light) inset;
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-card-mb {
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    /* Կոնտակտային տողերը դասավորվում են ձախից */
+    align-self: flex-start;
+}
+
+.contact-link a {
+    text-decoration: none;
+    color: var(--text-color);
+    /* Սև */
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+/* Կոնտակտային տեքստի հղումների գույնը */
+.contact-link a:hover {
+    color: var(--gold);
+    /* Կապույտ */
+}
+
+.contact-link svg {
+    margin-right: 15px;
+    font-size: 1.2em;
+    color: var(--gold);
+    /* Իկոնկաները Կապույտ */
+}
+
+/* Սոցիալական ցանցեր */
+.social-icons {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon-btn {
+    font-size: 2em;
+    color: var(--text-color);
+    /* Սև */
+    transition: transform 0.2s ease-in-out, color 0.2s;
+}
+
+.social-icon-btn:hover {
+    color: var(--gold);
+    /* Սոցիալական ցանցերի իկոնկաները hover-ի ժամանակ Կապույտ */
+    transform: scale(1.1);
+}
+
+/* --- PARTNER FOOTER --- */
+.footer-partners {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.partners-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.partner-btn {
+    padding: 12px 25px;
+}
+
+.copyright-text {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* --- ԱՆԻՄԱՑԻԱՆԵՐ --- */
+
+/* Թվերի "շարժման" անիմացիա (3D rotation) */
+@keyframes rollEffect {
+    0% {
+        transform: rotateX(0deg) translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotateX(30deg) translateY(-3px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: rotateX(0deg) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animated-scale {
+    animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.partner-btn.animated-pop {
+    animation: pop 0.5s ease-out;
 }

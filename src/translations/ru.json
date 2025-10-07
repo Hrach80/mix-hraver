@@ -25,7 +25,7 @@
     },
     "location": {
         "title": "Местоположение",
-        "address": "Mix Contry Bisschoppenhoflaan 219 Антверпен",
+        "address": "Mix Country Bisschoppenhoflaan 219 Antwerpen",
         "button": "Открыть маршрут"
     },
     "contact": {
@@ -33,5 +33,12 @@
         "call": "Тел.",
         "phone": "+0032486725765",
         "email": "info@mixcountry.be"
-    }
+    },
+        "countdown": {
+            "days": "Дней",
+            "hours": "Часов",
+            "minutes": "Мин",
+            "seconds": "Сек",
+            "event_started": "Мероприятие уже началось. Спешите!"
+        }
 }
