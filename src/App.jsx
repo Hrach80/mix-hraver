@@ -109,7 +109,6 @@ const CountdownTimer = ({ targetDate, targetTime }) => {
   );
 };
 
-// Լեզվի Ընտրիչ (LanguageSelector) - (Փոքր ոճային փոփոխություններ)
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
 

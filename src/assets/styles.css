@@ -25,20 +25,15 @@
 body {
     margin: 0;
     padding: 0;
-    /* ՓՈՓՈԽՎԱԾ ՖՈՆՏ: Impact-ը՝ լոգոյի տեսքին նմանեցնելու համար */
     font-family: 'Arial', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    /* Սև տեքստ */
-    /* ԿԵՆՏՐՈՆԱՑՈՒՄ */
     display: flex;
     justify-content: center;
-    /* content-ը վերևից կենտրոնացնելու համար՝ եթե էկրանը մեծ է */
     align-items: flex-start;
     min-height: 100vh;
 }
 
-/* App կոնտեյներ՝ Mobile-first դիզայնի կենտրոնացումով */
 .app-container {
     width: 100%;
     max-width: var(--max-width);
@@ -49,7 +44,6 @@ body {
     margin-right: auto;
 }
 
-/* ՎԵՐՆԱԳՐԵՐԻ ՖՈՆՏ ԵՎ ԴԱՍԱՎՈՐՎԱԾՈՒԹՅՈՒՆ */
 h1,
 h2,
 .hero-title,
@@ -58,9 +52,7 @@ h2,
     /* Տառատեսակը նմանեցված է լոգոյին */
     font-family: 'Impact', sans-serif;
     letter-spacing: 1px;
-    /* Լրացուցիչ տարածք տառերի միջև */
     text-align: center;
-    /* Վերնագրերը կենտրոնում */
 }
 
 /* Գլխագրեր */
