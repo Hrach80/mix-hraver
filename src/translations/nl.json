@@ -1,29 +1,37 @@
 {
     "header": {
-        "title": "Mix Country 1-jarig Bestaan"
+        "title": "Mix Country 1-jarig Bestaan!"
     },
     "hero": {
         "heading": "Uitnodiging voor een Groot Evenement",
         "subheading": "Wij nodigen u graag uit voor de viering van het 1-jarig bestaan van onze winkel.",
         "date": "15 Oktober",
-        "time": "Tijd: van 12:00 tot 18:00 uur",
+        "time": "Tijd: 18:00 uur",
         "button": "Bekijk Details"
     },
     "details": {
         "title": "Wat u kunt verwachten",
-        "p1": "Het is alweer een jaar geleden dat «Mix Country» u verrast met de beste boodschappen en de lekkerste fastfood. Laten we samen vieren!",
-        "p2": "U vindt bij ons kortingen, cadeaus, proeverijen en natuurlijk onze speciale burgers. Het evenement is perfect om met het gezin door te brengen.",
-        "p3": "Wij verwachten u, onze gewaardeerde gasten!"
+        "p1": "Bedankt dat u ons al die tijd heeft gesteund. Uw vertrouwen, warmte en aankopen maken ons elke dag sterker.",
+        "p2": "Bij deze gelegenheid nodigen wij u van harte uit om ons eerste jubileum te vieren in een warme, gezellige en vrolijke familiesfeer.",
+        "p3": "Wat er op het programma staat:",
+        "p4": "— Speciale traktatie",
+        "p5": "— Buffet en Gastvrijheid (Proeverij)",
+        "p6": "— **Onze Specialiteit: Kebab van de Grill (Chorovats)**",
+        "p7": "— Armeense dranken",
+        "p8": "— Muziek en een Vrolijke Sfeer",
+        "p9": "Feestelijke stemming gedurende de hele avond.",
+        "p10": "Het evenement is perfect om door te brengen met familie en vrienden.",
+        "p11": "Wij wachten op u om samen de eerste verjaardag van Mix Country te vieren!"
     },
     "location": {
         "title": "Locatie",
-        "address": "Stad Yerevan, Adres X, Straat Y",
-        "button": "Open op Kaart (Route)"
+        "address": "Mix Contry Bisschoppenhoflaan 219 Antwerpen",
+        "button": "Open de route"
     },
     "contact": {
         "title": "Contacten",
         "call": "Tel.",
-        "phone": "+374 99 00 00 00",
-        "email": "info@mixcountry.am"
+        "phone": "+0032486725765",
+        "email": "info@mixcountry.be"
     }
 }

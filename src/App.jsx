@@ -94,7 +94,7 @@ const LocationSection = () => {
   const { t } = useTranslation();
 
   // Խնդրում եմ փոխարինել Ձեր հասցեի կոորդինատներով
-  const googleMapsUrl = "https://maps.google.com/maps/dir/?api=1&destination=40.1772,44.5034";
+  const googleMapsUrl = "https://maps.app.goo.gl/ELrYiidApwdVQmi46";
   const mapIframeSrc = "https://www.google.com/maps/embed?pb=... your embed code here ...";
 
   return (
@@ -130,8 +130,8 @@ const ContactSection = () => {
   const socialLinks = {
     viber: `viber://chat?number=${t('contact.phone').replace(/\s/g, '')}`,
     whatsapp: `https://wa.me/${t('contact.phone').replace(/\s/g, '')}`,
-    facebook: 'https://facebook.com/yourpage',
-    instagram: 'https://instagram.com/yourpage',
+    facebook: 'https://www.facebook.com/mix.country.supermarkt?mibextid=wwXIfr&rdid=2dNjl4I7Iup6HfYD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16JNQTDE7B%2F%3Fmibextid%3DwwXIfr#',
+    instagram: 'https://www.instagram.com/mixcountrysupermarkt/?igsh=a3p3ampkbDdzczZn#',
   };
 
 
@@ -193,7 +193,7 @@ const MainSections = () => {
       <div className="neomorphic-card" style={{ textAlign: 'center', padding: '30px 20px' }}>
         <img src="/logo.png" alt="Mix Country Logo" className="logo" />
 
-        <h1>{t('header.title')}</h1>
+        <h1 >{t('header.title')}</h1>
         <p style={{ color: 'var(--gold)', fontSize: '1.4em', marginBottom: '10px' }}>{t('hero.date')}</p>
         <p style={{ fontSize: '1.1em' }}>{t('hero.time')}</p>
       </div>
@@ -203,7 +203,15 @@ const MainSections = () => {
         <h2>{t('details.title')}</h2>
         <p style={{ marginBottom: '10px' }}>{t('details.p1')}</p>
         <p style={{ marginBottom: '10px' }}>{t('details.p2')}</p>
-        <p style={{ fontWeight: 'bold', marginTop: '20px' }}>{t('details.p3')}</p>
+        <p style={{ marginBottom: '10px' }}>{t('details.p3')}</p>
+        <p style={{ marginBottom: '10px' }}>{t('details.p4')}</p>
+        <p style={{ marginBottom: '10px' }}>{t('details.p5')}</p>
+        <p style={{ marginBottom: '10px' }}>{t('details.p6')}</p>
+        <p style={{ marginBottom: '10px' }}>{t('details.p7')}</p>
+        <p style={{ marginBottom: '10px' }}>{t('details.p8')}</p>
+        <p style={{ marginBottom: '10px' }}>{t('details.p9')}</p>
+        <p style={{ marginBottom: '10px' }}>{t('details.p10')}</p>
+        <p style={{ fontWeight: 'bold', marginTop: '20px' }}>{t('details.p11')}</p>
 
         <a href="#location" className="neomorphic-btn">
           {t('hero.button')}

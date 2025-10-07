@@ -4,7 +4,7 @@
 :root {
     /* Մուգ ֆոնի հիմնական գույները */
     --bg-dark: #120e0d;
-    --bg-primary: #5e5d5d;
+    --bg-primary: #fff4c8;
     --bg-secondary: #2c2826;
     --gold-primary: #aa864e;
     --gold-secondary:#aa864e;
@@ -39,9 +39,8 @@ body {
     font-style: italic;
     background-color: var(--bg-dark);
     background-image: url("https://pixy.org/src2/671/6718872.jpg");
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
-    background-position: center;
     position: relative;
     color: var(--text-light);
     line-height: 1.6;
@@ -77,7 +76,8 @@ h1,
 h2 {
     color: var(--gold-secondary);
     font-family: 'Dancing Script', 'Noto Serif Armenian', cursive;
-    font-weight: 700;
+    font-weight: 800;
+
     letter-spacing: 1px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
