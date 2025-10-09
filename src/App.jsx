@@ -292,7 +292,6 @@ const MainSections = () => {
         <p>{t('details.p1')}</p>
         <p>{t('details.p2')}</p>
         <p>{t('details.p3')}</p>
-        <p>{t('details.p4')}</p>
         <p>{t('details.p5')}</p>
         <p>{t('details.p6')}</p>
         <p>{t('details.p7')}</p>
